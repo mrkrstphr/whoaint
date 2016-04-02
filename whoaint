@@ -10,7 +10,7 @@ red='\033[0;31m'
 reset='\033[0m'
 results=$(whois $1)
 
-if [[ "${results}" =~ "No match for" ]]; then
+if [[ "${results}" =~ "NOT FOUND" ]]; then
   echo -e "\n${green}Domain ${1} appears to be available! Better buy it...${reset}\n"
 else
   echo -e "\n${red}Domain ${1} is taken. Prolly squatters...${reset}\n"
